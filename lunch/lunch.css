@@ -1,0 +1,6 @@
+/* CSS declarations go here */
+
+.selected {
+    font-weight: bold;
+    background-color: yellow;
+}

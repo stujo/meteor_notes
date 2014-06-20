@@ -1,0 +1,23 @@
+<head>
+    <title>lunch</title>
+</head>
+
+<body>
+{{> restaurants}}
+</body>
+
+<template name="restaurants">
+    <h1>Pick a Restaurant!</h1>
+    {{#each restaurants}}
+    {{> restaurant}}
+    {{/each}}
+    Your selection: {{selected_restaurant.name}}
+</template>
+
+<template name="restaurant">
+    <div class="restaurant {{selected}}">
+        <span class="name">{{name}}</span>
+        <span class="score">{{score}}</span>
+    </div>
+</template>
+
