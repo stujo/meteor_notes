@@ -8,11 +8,13 @@
 </body>
 
 <template name="restaurants">
+    {{#if user}}
     <h1>Pick a Restaurant!</h1>
     {{#each restaurants}}
     {{> restaurant}}
     {{/each}}
     Your selection: {{selected_restaurant.name}}
+    {{/if}}
 </template>
 
 <template name="restaurant">

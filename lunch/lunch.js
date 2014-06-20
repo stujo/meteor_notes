@@ -16,6 +16,9 @@ if (Meteor.isClient) {
       return Restaurants.findOne(Session.get("selected_restaurant_id"));
     }
   };
+  Template.restaurants.user = function () {
+    return Meteor.user();
+  };
 
   Template.restaurants.events({
       'click': function () {
