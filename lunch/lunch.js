@@ -1,4 +1,4 @@
-Restaurants = new Meteor.Collection("restaurants");
+var Restaurants = new Meteor.Collection("restaurants");
 
 if (Meteor.isClient) {
 
@@ -40,11 +40,12 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
-    if (Restaurants.find().count() === 0) {
+    //if (Restaurants.find().count() === 0) {
+      Restaurants.remove({});
       var locs = ["Brickhouse", "HRD", "Centro", "Garaje"];
       for (var i = 0; i < locs.length; i++) {
         Restaurants.insert({name: locs[i], score: 0});
       }
-    }
+    //}
   });
 }
