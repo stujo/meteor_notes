@@ -12,3 +12,12 @@ Meteor
 
 
 
+#atmospherejs.com
+* iron-router
+```mrt add iron-router```
+
+##See Also
+* discover meteor book
+* [http://eventedmind.com](http://eventedmind.com)
+
+
